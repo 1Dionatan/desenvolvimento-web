@@ -1,0 +1,19 @@
+body {
+    font-family: sans-serif;
+    background: linear-gradient(135deg, #e6e6fa 0%, #d8bfd8 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+#root {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
