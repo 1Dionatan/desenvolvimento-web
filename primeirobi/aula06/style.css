@@ -1,0 +1,17 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(155, 62, 62);
+}
+
+.title{
+    color:blue;
+}
+
+.dark-mode{
+    background-color: rgb(56, 45, 21);
+
+    color: white;
+}

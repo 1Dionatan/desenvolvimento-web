@@ -1,0 +1,54 @@
+* {
+    background-color: crimson;
+}
+
+h1{
+    color: aquamarine;
+    text-align: center;
+}
+
+#test {
+    color: blueviolet;
+}
+
+/* seletores */
+
+#hero {
+    background-color: darkolivegreen;
+    display: flex;
+    justify-content: center;
+}
+
+.lista {
+    font-size: medium;
+    list-style: none;
+}
+
+li p {
+    font-style: italic;
+}
+
+li > p {
+    font-style: normal;
+}
+
+li > span > p {
+    font-style: italic;
+}
+
+li + p {
+    font-weight: 100;
+}
+
+/* ESTILIZAÇÃO */
+
+.box1 {
+    background-color: limegreen;
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.box2 {
+    background-color: blue;
+    display: flex;
+}
