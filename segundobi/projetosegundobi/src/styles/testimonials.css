@@ -1,0 +1,186 @@
+#testimonials {
+    height: 100vh;
+    background: linear-gradient(135deg, #f0f4f8 0%, #e2e8f0 100%);
+    display: flex;
+    flex-direction: column;
+    padding-block: 4rem;
+    gap: 2rem;
+
+    header {
+        display: flex;
+        text-align: center;
+        flex-direction: column;
+        gap: 1.5rem;
+        padding-inline: 2rem;
+        align-items: center;
+    }
+
+    header :first-child {
+        color: var(--primary-color);
+        font-weight: var(--fw-bold);
+    }
+
+    p {
+        color: var(--text-color);
+    }
+
+    .carousel {
+        display: flex;
+        width: 100%;
+        max-width: 100%;
+        margin-inline: auto;
+        overflow: hidden;
+        position: relative;
+        mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+        -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    }
+
+    .carousel:hover {
+        .carousel-content {
+            animation-play-state: paused;
+            cursor: pointer;
+        }
+    }
+
+    .carousel-content {
+        display: flex;
+        gap: 1.5rem;
+        animation: swipe 30s linear infinite;
+        will-change: transform;
+        width: max-content;
+        flex-shrink: 0;
+        flex-wrap: nowrap;
+    }
+
+    .carousel-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-width: 14rem;
+        max-width: 16rem;
+        width: 14rem;
+        flex-shrink: 0;
+        background: #f0f4f8;
+        border-radius: 0.75rem;
+        padding: 2.5rem 1.5rem;
+        text-align: center;
+        gap: 1.25rem;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+
+        >img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 0.5rem;
+        }
+
+        .testimony {
+            width: 100%;
+        }
+
+        .testimony p {
+            color: #4a5568;
+            font-weight: 400;
+            font-size: 0.9375rem;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        .rating {
+            display: flex;
+            justify-content: center;
+            gap: 0.375rem;
+            margin: 0.5rem 0;
+        }
+
+        .rating img {
+            width: 22px;
+            height: 22px;
+            filter: brightness(0) saturate(100%) invert(65%) sepia(90%) saturate(500%) hue-rotate(90deg) brightness(110%) contrast(120%);
+        }
+
+        .names {
+            display: flex;
+            flex-direction: column;
+            gap: 0.25rem;
+            margin-top: 0.5rem;
+        }
+
+        .names :first-child {
+            color: #1a202c;
+            font-size: 1rem;
+            font-weight: 700;
+            margin: 0;
+        }
+
+        .names :last-child {
+            color: #1a202c;
+            font-size: 0.875rem;
+            font-weight: 400;
+            margin: 0;
+        }
+}
+
+    @keyframes swipe {
+        0% {
+            transform: translateX(0);
+        }
+
+        100% {
+            transform: translateX(calc(-33.333% - 1rem));
+        }
+    }
+
+    @media (width >=580px) {
+        #testimonials {
+            gap: 5rem;
+            align-items: center;
+
+            header p {
+                width: 60%;
+            }
+
+            .carousel {
+                overflow: hidden;
+                width: 80%;
+                max-width: 1200px;
+            }
+
+            .testimony {
+                width: 100%;
+            }
+
+            .carousel-card {
+                min-width: 18rem;
+                max-width: 20rem;
+                min-height: auto;
+                padding: 3rem 2rem;
+                gap: 1.5rem;
+            }
+
+            .carousel-card > img {
+                width: 140px;
+                height: 140px;
+            }
+
+            .carousel-card .testimony p {
+                font-size: 1rem;
+                line-height: 1.65;
+            }
+
+            .carousel-card .rating img {
+                width: 24px;
+                height: 24px;
+            }
+
+            .carousel-card .names :first-child {
+                font-size: 1.125rem;
+            }
+
+            .carousel-card .names :last-child {
+                font-size: 0.9375rem;
+            }
+        }
+    }
+}
